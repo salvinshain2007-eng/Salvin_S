@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salvin Shain | Professional Portfolio</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/portfolio.css" />
+  
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <!-- Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  
+  <script>gsap.registerPlugin(ScrollTrigger);</script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation">
+    <div class="nav-logo">Salvin<span>⚽</span>Shain</div>
+    <a href="index.html" class="nav-back">⬅ Return to Landing</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="portfolio-hero">
+    <div class="hero-content">
+      <div class="hero-badge">Curriculum Vitae</div>
+      <h1 class="hero-title">
+        Salvin <br />
+        <span class="highlight">Shain</span>
+      </h1>
+      <p class="hero-subtitle">
+        Elite Football Manager. Tactician. Serial Winner. <br>
+        Over two decades of experience transforming clubs into continental giants through data-driven analysis and unparalleled leadership.
+      </p>
+      <a href="#cv-details" class="btn btn-primary">
+        View Career Details ⬇
+      </a>
+    </div>
+  </section>
+
+  <!-- DETAILS GRID -->
+  <section id="cv-details">
+    <div class="cv-grid">
+      
+      <!-- Left Column: Experience & Education -->
+      <div class="cv-column">
+        <div class="cv-section">
+          <h2>Managerial Experience</h2>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021 — Present</div>
+            <h3 class="timeline-title">Head Manager</h3>
+            <div class="timeline-org">Zodex FC (Premier League)</div>
+            <p class="timeline-desc">Led the team from mid-table to back-to-back league titles and their first Champions League trophy. Implemented a revolutionary high-pressing 4-3-3 system.</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2016 — 2021</div>
+            <h3 class="timeline-title">First Team Coach</h3>
+            <div class="timeline-org">Olympia Sporting (La Liga)</div>
+            <p class="timeline-desc">Secured three domestic cups and oversaw the development of 14 academy players into the first team squad.</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2012 — 2016</div>
+            <h3 class="timeline-title">Assistant Manager</h3>
+            <div class="timeline-org">Bavarian Giants (Bundesliga)</div>
+            <p class="timeline-desc">Part of the technical staff that achieved an unprecedented domestic treble. Specialised in opposition analysis and set-piece routines.</p>
+          </div>
+        </div>
+        
+        <div class="cv-section" style="margin-top: 80px;">
+          <h2>Qualifications</h2>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2014</div>
+            <h3 class="timeline-title">UEFA Pro Licence</h3>
+            <div class="timeline-org">UEFA Coaching Institute</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2010</div>
+            <h3 class="timeline-title">MSc in Sports Science</h3>
+            <div class="timeline-org">Loughborough University</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Skills & Philosophy -->
+      <div class="cv-column">
+        <div class="cv-section">
+          <h2>Core Competencies</h2>
+          <div class="skills-container">
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Tactical Analysis & Setup</span>
+                <span class="skill-percent">98%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" style="width: 98%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Man Management & Motivation</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" style="width: 95%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Youth Development</span>
+                <span class="skill-percent">92%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" style="width: 92%;"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Data-Driven Recruitment</span>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="cv-section" style="margin-top: 80px;">
+          <h2>Managerial Philosophy</h2>
+          <div class="skill-item" style="padding: 32px;">
+            <p style="color: var(--white-dim); line-height: 1.8; font-style: italic;">
+              "Football is a game of space and mathematics played by human beings. My philosophy marries the analytical precision of modern data science with profound empathy for the players. We don't just train bodies to run; we train minds to read the game faster than the opposition can react."
+            </p>
+            <p style="margin-top: 20px; font-weight: 700; color: var(--accent);">— Salvin Shain</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-copy">© <span id="current-year"></span> Salvin Shain Portfolio. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="scripts/portfolio.js"></script>
+
+</body>
+</html>

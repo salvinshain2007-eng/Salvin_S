@@ -1,0 +1,278 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   portfolio.css — Premium Manager CV/Portfolio Design
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --black:      #050505;
+  --dark:       #0a0a0d;
+  --dark-2:     #121216;
+  --dark-3:     #1a1a20;
+  --accent:     #00ff88;
+  --accent-2:   #00b8ff;
+  --white:      #f5f5f5;
+  --white-dim:  rgba(245,245,245,0.7);
+  --glass-bg:   rgba(255,255,255,0.03);
+  --glass-border: rgba(255,255,255,0.06);
+  --font-main:  'Montserrat', sans-serif;
+  --font-body:  'Poppins', sans-serif;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: auto; font-size: 16px; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; border-radius: 12px; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+/* ── Navbar ─────────────────────────────────────────────────────────────── */
+#navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 24px 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+#navbar.scrolled {
+  background: rgba(5,5,5,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 16px 6vw;
+}
+.nav-logo {
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+.nav-logo span { color: var(--accent); }
+.nav-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 10px 24px;
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  transition: all var(--transition);
+}
+.nav-back:hover {
+  background: var(--glass-bg);
+  border-color: rgba(255,255,255,0.2);
+  transform: translateX(-4px);
+}
+
+/* ── Hero ───────────────────────────────────────────────────────────────── */
+#portfolio-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 6vw;
+  background: radial-gradient(circle at 70% 50%, rgba(0,255,136,0.1) 0%, transparent 60%),
+              radial-gradient(circle at 30% 80%, rgba(0,184,255,0.08) 0%, transparent 50%),
+              var(--black);
+}
+.hero-content {
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+.hero-badge {
+  display: inline-flex;
+  padding: 8px 16px;
+  background: rgba(0,255,136,0.1);
+  border: 1px solid rgba(0,255,136,0.3);
+  border-radius: 50px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.hero-title {
+  font-family: var(--font-main);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.hero-title .highlight {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--white-dim);
+  max-width: 600px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all var(--transition);
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: var(--black);
+  box-shadow: 0 8px 30px rgba(0,255,136,0.25);
+}
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0,255,136,0.4);
+}
+
+/* ── Education / Skills Grid ────────────────────────────────────────────── */
+#cv-details {
+  padding: 120px 6vw;
+  background: var(--dark);
+}
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+.cv-section h2 {
+  font-family: var(--font-main);
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.cv-section h2::before {
+  content: '';
+  display: block;
+  width: 40px; height: 3px;
+  background: var(--accent);
+}
+.timeline-item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 40px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: -40px;
+  width: 2px;
+  background: var(--glass-border);
+}
+.timeline-item:last-child::before { display: none; }
+.timeline-dot {
+  position: absolute;
+  left: -5px; top: 6px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+.timeline-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.timeline-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.timeline-org {
+  font-size: 0.9rem;
+  color: var(--white-dim);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.skill-item {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 24px;
+}
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.skill-name {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.skill-percent {
+  color: var(--accent);
+  font-weight: 600;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+.skill-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 10px;
+  transform-origin: left;
+}
+
+/* ── Footer ─────────────────────────────────────────────────────────────── */
+footer {
+  padding: 40px 6vw;
+  text-align: center;
+  background: var(--black);
+  border-top: 1px solid var(--glass-border);
+}
+.footer-copy {
+  color: var(--white-dim);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .cv-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 3.5rem; }
+}
