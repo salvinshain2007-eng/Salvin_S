@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: football-manager-backend
+    env: node
+    rootDir: Backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        sync: false
+
+  - type: web
+    name: football-manager-frontend
+    env: static
+    rootDir: Frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist

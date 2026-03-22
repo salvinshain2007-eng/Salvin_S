@@ -276,3 +276,11 @@ footer {
   .cv-grid { grid-template-columns: 1fr; }
   .hero-title { font-size: 3.5rem; }
 }
+
+@media (max-width: 600px) {
+  .hero-title { font-size: 2.5rem; letter-spacing: -1px; }
+  #portfolio-hero { padding: 80px 6vw; }
+  .cv-section h2 { font-size: 1.8rem; }
+  .nav-back { padding: 8px 16px; font-size: 0.75rem; }
+  .hero-subtitle { font-size: 1rem; }
+}

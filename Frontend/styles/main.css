@@ -865,6 +865,8 @@ footer {
   #nav-links.open { right: 0; }
   #nav-links a { font-size: 1.1rem; }
   #menu-toggle { display: flex; z-index: 1001; }
+  
+  .hero-content { padding-top: 80px; }
 
   .about-grid,
   .achievements-grid,

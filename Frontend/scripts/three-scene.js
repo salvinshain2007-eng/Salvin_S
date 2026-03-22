@@ -21,9 +21,12 @@
     alpha: true,
     antialias: true
   });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  
+  const isMobile = window.innerWidth < 768;
+  
+  renderer.setPixelRatio(isMobile ? 1 : Math.min(window.devicePixelRatio, 2));
   renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.enabled = !isMobile;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
   // ── Lighting ────────────────────────────────────────────────────────────────
@@ -136,7 +139,7 @@
 
   // ── Floating Particles ──────────────────────────────────────────────────────
   const particlesGeo = new THREE.BufferGeometry();
-  const particleCount = 200;
+  const particleCount = isMobile ? 50 : 200;
   const positions_p = new Float32Array(particleCount * 3);
   for (let i = 0; i < particleCount * 3; i++) {
     positions_p[i] = (Math.random() - 0.5) * 20;
