@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); // Changed capital R to lowercase r
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -44,7 +44,7 @@ const startServer = async () => {
     console.log('✅ MongoDB Atlas Connected');
 
     app.listen(PORT, () => {
-      console.log(`🚀 Server running on http://localhost:${PORT}`);
+      console.log(`🚀 Server running on port ${PORT}`);
     });
 
   } catch (error) {
