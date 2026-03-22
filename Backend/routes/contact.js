@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Contact = require('../models/Contact');
+const Contact = require('../models/contact'); // Changed to lowercase 'contact'
 
 // Validation helper
 const validate = ({ name, age, email, description }) => {
